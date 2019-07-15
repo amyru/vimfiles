@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/deploy/.vim/bundle/syntastic'
+let g:netrw_dirhist_2='/home/deploy/.rvm/rubies/ruby-2.4.1'
+let g:netrw_dirhist_3='/home/deploy/.rvm/rubies/ruby-2.4.1/bin'
+let g:netrw_dirhist_4='/home/deploy/.rvm/gems/ruby-2.4.1'
+let g:netrw_dirhist_5='/home/deploy/.vim'

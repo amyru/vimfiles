@@ -2,6 +2,10 @@
 "This must be first, because it changes other options as a side effect.
 set nocompatible
 
+"set default split sides
+set splitright
+set splitbelow
+
 "activate pathogen
 call pathogen#infect()
 
@@ -160,8 +164,8 @@ let g:miniBufExplModSelTarget = 1
 let g:miniBufExplorerMoreThanOne = 0
 let g:miniBufExplUseSingleClick = 1
 let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplSplitBelow=0
-let g:miniBufExplVSplit = 30
+"let g:miniBufExplSplitBelow=1
+"let g:miniBufExplVSplit = 30
 
 "tslime
 "vim-rspec
@@ -169,6 +173,10 @@ let g:miniBufExplVSplit = 30
 "let g:rspec_command = "Dispatch bundle exec zeus rspec -I . {spec}"
 let g:rspec_command = "Dispatch exec zeus rspec -I . {spec}"
 "let g:rspec_command = 'call Send_to_Tmux("bundle exec zeus rspec -I . {spec}\n")'
+
+"vim-sass-lint
+let g:syntastic_sass_checkers=["sasslint"]
+let g:syntastic_scss_checkers=["sasslint"]
 
 map <Leader>b :MiniBufExplorer<cr>
 
@@ -384,7 +392,12 @@ autocmd BufReadPost fugitive://*
   \ endif
 
 "filetype plugin indent on
+let g:indentLine_char = '.'
 "syntax on
+
+"ctrlp settings
+let g:ctrlp_max_files=30000
+let g:ctrlp_custom_ignore={ 'dir': '\.git$\|node_modules$\|tmp$\' }
 
 "turn on syntax highlighting
 syntax enable
@@ -393,3 +406,4 @@ set background=dark
 colorscheme solarized
 
 :match ExtraWhitespace /\s\+$/
+
